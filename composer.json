@@ -1,0 +1,29 @@
+{
+    "name": "enzyme/parrot",
+    "type": "library",
+    "description": "Mockable primitives and static functions for PHP.",
+    "keywords": ["enzyme","parrot","mockable","primitives","static","functions","php"],
+    "homepage": "https://github.com/enzyme/parrot",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tristan Strathearn",
+            "email": "r3oath@protonmail.ccom",
+            "homepage": "https://github.com/r3oath",
+            "role": "Full Stack Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Enzyme\\Parrot\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "mockery/mockery": "^0.9.4",
+        "satooshi/php-coveralls": "^0.6.1"
+    }
+}
