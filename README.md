@@ -78,12 +78,12 @@ public function FooTest
     $file = __DIR__ . '/fake_file.txt';
     $expected = 'Contents of fake_file.txt';
 
-    $file = m::mock('Enzyme\Parrot\File[getContents]', function ($mock) use ($expected, $file) {
+    $fileDispatch = m::mock('Enzyme\Parrot\File[getContents]', function ($mock) use ($expected, $file) {
         $mock->shouldReceive('getContents')->withArgs([$file, []])->times(1)->andReturn($expected);
     });
     
 
-    $foo = new Foo;
+    $foo = new Foo($fileDispatch);
     $actual = $foo->openConfig($file);
     
     $this->assertEquals($actual, $expected);
