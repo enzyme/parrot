@@ -123,3 +123,7 @@ Imap | imap_
 MySql | mysql_
 PostgreSql | pg_
 Sqlite | sqlite_
+
+# Missing something?
+
+If there's a particular wrapper you're looking for and it isn't listed above, open a new issue, or simply extend `Parrot` following the rules in the existing wrappers and send a PR. Please check out `CONTRIBUTING.md` as well.
