@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/enzyme/parrot.svg?branch=master)](https://travis-ci.org/enzyme/parrot)
 
-Mockable primitives and static functions for PHP.
+Mockable native static functions for PHP.
 
 # What is it?
 
