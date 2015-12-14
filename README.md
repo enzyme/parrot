@@ -1,6 +1,6 @@
-<img src="https://cloud.githubusercontent.com/assets/2805249/11685005/7af1aa74-9ec1-11e5-924c-711068f7adde.png" width="200">
+<img src="https://cloud.githubusercontent.com/assets/2805249/11770677/3c3de7f6-a250-11e5-8145-bcb9fb8c27cb.png" width="200">
 
-[![Build Status](https://travis-ci.org/parrot/name.svg?branch=master)](https://travis-ci.org/enzyme/parrot)
+[![Build Status](https://travis-ci.org/enzyme/parrot.svg?branch=master)](https://travis-ci.org/enzyme/parrot)
 
 Mockable primitives and static functions for PHP.
 
