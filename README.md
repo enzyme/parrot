@@ -23,7 +23,7 @@ Let's take a look at what used to happen:
 ```php
 class Foo
 {
-    public function openConfig($file) 
+    public function openConfig($file)
     {
         $contents = file_get_contents($file);
         return $contents;
@@ -41,7 +41,7 @@ public function FooTest
 
     $foo = new Foo;
     $actual = $foo->openConfig($file);
-    
+
     $this->assertEquals($actual, $expected);
 }
 ```
@@ -62,7 +62,7 @@ class Foo
         $this->fileDispatch = $fileDispatch;
     }
 
-    public function openConfig($file) 
+    public function openConfig($file)
     {
         $contents = $this->fileDispatch->getContents($file);
         return $contents;
@@ -81,11 +81,11 @@ public function FooTest
     $fileDispatch = m::mock('Enzyme\Parrot\File[getContents]', function ($mock) use ($expected, $file) {
         $mock->shouldReceive('getContents')->withArgs([$file, []])->times(1)->andReturn($expected);
     });
-    
+
 
     $foo = new Foo($fileDispatch);
     $actual = $foo->openConfig($file);
-    
+
     $this->assertEquals($actual, $expected);
 }
 ```
@@ -94,7 +94,7 @@ Now we just fake the file and it's contents, sweet!!!
 
 # Sugar
 
-You may have noticed in the above example that the Parrot version of `file_get_contents` was simply `getContents()`. 
+You may have noticed in the above example that the Parrot version of `file_get_contents` was simply `getContents()`.
 
 With all the Parrot'd wrappers around PHP's functions, we leave off the prefix. Who wants to repeat themselves?
 
@@ -123,6 +123,7 @@ Imap | imap_
 MySql | mysql_
 PostgreSql | pg_
 Sqlite | sqlite_
+Glob | glob (Simply becomes `execute`)
 
 # Missing something?
 
