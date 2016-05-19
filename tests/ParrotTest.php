@@ -107,4 +107,15 @@ class ParrotTest extends PHPUnit_Framework_TestCase
 
         $imap->utf7Decode();
     }
+
+    public function testGlobFunctionNamesAreResolved()
+    {
+        $expected = 'glob';
+
+        $glob = m::mock('Enzyme\Parrot\Glob[dispatch]', function ($mock) use ($expected) {
+            $mock->shouldReceive('dispatch')->withArgs([$expected, []])->times(1);
+        });
+
+        $glob->execute();
+    }
 }
